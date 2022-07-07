@@ -1,6 +1,4 @@
-const BASE_URL = '/api';
-const UPLOAD_PATH = 'storage/signed-post';
-
+const URL = 'https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-fcdb61c1-1e44-4312-bd2c-2e1798b0d357/default/uploadjmg';
 
 /**
  * Uploads a file by getting a signed Spaces POST payload and using it to 
@@ -9,7 +7,7 @@ const UPLOAD_PATH = 'storage/signed-post';
  * @returns 
  */
 async function uploadFile(file) {
-  const signedPostRes = await fetch(`${BASE_URL}/${UPLOAD_PATH}`, {
+  const signedPostRes = await fetch(`${URL}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
